@@ -12,9 +12,11 @@ userListEl.innerHTML = usersData.map((user) =>  userHTML(user)).join("");
 main();
 
 function showUserPosts(id) {
-    window.location.href = `http://127.0.0.1:5500/user-posts-starter/user.html`
-    console.log(id);
-   
+    localStorage.setItem("id", id)
+    console.log(window.location);
+        window.location.href = `${window.location.origin}/user-posts-starter/user.html`
+
+
 }
 
 function userHTML(user) {
